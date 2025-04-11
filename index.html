@@ -9,19 +9,44 @@
     body {
       margin: 0;
       font-family: 'Press Start 2P', cursive;
-      background-color: #3e2a47; /* Dark brown */
-      color: #f0e68c; /* Mustard yellow */
+      background-color: #3e2a47;
+      color: #f0e68c;
       padding: 2rem;
       overflow: hidden;
+      display: flex;
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: 2rem;
       color: #f0e68c;
       text-align: center;
       margin-bottom: 2rem;
-      position: relative;
-      z-index: 10;
+    }
+
+    .sidebar {
+      width: 200px;
+      padding-right: 1rem;
+      border-right: 2px dashed #f0e68c;
+    }
+
+    .sidebar h2 {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .sidebar a {
+      display: block;
+      margin-bottom: 0.8rem;
+      color: #f0e68c;
+      text-decoration: none;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 0.7rem;
+    }
+
+    .main-content {
+      flex: 1;
+      overflow-y: auto;
+      padding-left: 2rem;
     }
 
     .collage {
@@ -30,8 +55,6 @@
       gap: 1rem;
       justify-content: center;
       padding: 2rem;
-      overflow-y: scroll;
-      height: 75vh;
     }
 
     .image-card {
@@ -58,7 +81,7 @@
       bottom: 10px;
       left: 10px;
       color: #f0e68c;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       opacity: 0;
       transition: opacity 0.3s ease-in-out;
     }
@@ -72,7 +95,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      font-size: 0.9rem;
+      font-size: 1rem;
       color: #fff;
       display: none;
       background: rgba(0, 0, 0, 0.6);
@@ -88,7 +111,7 @@
     .secret {
       position: absolute;
       font-size: 0.8rem;
-      color: #ff6347; /* Secret message in red */
+      color: #ff6347;
       top: 30%;
       right: 10%;
       opacity: 0;
@@ -101,79 +124,84 @@
   </style>
 </head>
 <body>
-
-  <h1>Too Many Tabs Open</h1>
-
-  <div class="collage">
-    <!-- Section 1: Sarcasm -->
-    <div class="image-card">
-      <img src="https://via.placeholder.com/200x250/8B4513/FFFFFF?text=Insert+Sarcasm+Here" alt="Sarcasm">
-      <div class="section-title">Insert Sarcasm Here</div>
-      <div class="blurb">Quotes, clapbacks, and chaotic wisdom.</div>
-    </div>
-    
-    <!-- Section 2: Buffering -->
-    <div class="image-card">
-      <img src="https://via.placeholder.com/200x250/8B4513/FFFFFF?text=Emotionally+Buffering" alt="Buffering">
-      <div class="section-title">Emotionally Buffering</div>
-      <div class="blurb">Memes, glitches, and the occasional breakdown.</div>
-
-    </div>
-    
-    <!-- Section 3: Mood Swings -->
-    <div class="image-card">
-      <img src="https://via.placeholder.com/200x250/8B4513/FFFFFF?text=Mood+Swings+%26+Misspelled+Things" alt="Mood Swings">
-      <div class="section-title">Mood Swings & Misspelled Things</div>
-      <div class="blurb">Random writing drafts straight from the abyss.</div>
+  <div class="sidebar">
+    <h2>Contents</h2>
+    <a href="sarcasm.html">Sarcasm</a>
+    <a href="buffering.html">Buffering</a>
+    <a href="moods.html">Mood Swings</a>
+    <a href="ink.html">Ink Spills</a>
+    <a href="panic.html">Panic</a>
+    <a href="books.html">Books</a>
+    <a href="games.html">Games</a>
+    <a href="study.html">Study</a>
+    <a href="songs.html">Songs</a>
+    <a href="photography.html">Photography</a>
+  </div>
   
-    </div>
-    
-    <!-- Section 4: Ink Spills -->
-    <div class="image-card">
-      <img src="https://via.placeholder.com/200x250/8B4513/FFFFFF?text=Spilled+Ink+%26+Regret" alt="Ink Spills">
-      <div class="section-title">Spilled Ink & Regret</div>
-      <div class="blurb">Personal rants, revelations, and late-night confessions.</div>
+  <div class="main-content">
+    <h1>Too Many Tabs Open</h1>
+    <div class="collage">
+      <!-- Section Cards -->
+      <div class="image-card">
+        <img src="https://via.placeholder.com/200x250/8B4513/FFFFFF?text=Insert+Sarcasm+Here" alt="Sarcasm">
+        <div class="section-title">Insert Sarcasm Here</div>
+        <div class="blurb">Quotes, clapbacks, and chaotic wisdom.</div>
+      </div>
 
-    </div>
-    
-    <!-- Section 5: Panic -->
-    <div class="image-card">
-      <img src="https://via.placeholder.com/200x250/8B4513/FFFFFF?text=Just+a+Pinch+of+Panic" alt="Panic">
-      <div class="section-title">Just a Pinch of Panic</div>
-      <div class="blurb">Chaotic cooking adventures with questionable outcomes.</div>
-     
-    </div>
-    
-    <!-- Section 6: Books -->
-    <div class="image-card">
-      <img src="https://via.placeholder.com/200x250/8B4513/FFFFFF?text=Spoiler+Alert%3A+I'm+Obsessed" alt="Books">
-      <div class="section-title">Spoiler Alert: I'm Obsessed</div>
-      <div class="blurb">Book reviews with maximum emotions and minimal chill.</div>
+      <div class="image-card">
+        <img src="https://via.placeholder.com/200x250/8B4513/FFFFFF?text=Emotionally+Buffering" alt="Buffering">
+        <div class="section-title">Emotionally Buffering</div>
+        <div class="blurb">Memes, glitches, and the occasional breakdown.</div>
+      </div>
 
-    </div>
+      <div class="image-card">
+        <img src="https://via.placeholder.com/200x250/8B4513/FFFFFF?text=Mood+Swings+%26+Misspelled+Things" alt="Mood Swings">
+        <div class="section-title">Mood Swings & Misspelled Things</div>
+        <div class="blurb">Random writing drafts straight from the abyss.</div>
+      </div>
 
-    <!-- Section 7: Games -->
-    <div class="image-card">
-      <img src="https://via.placeholder.com/200x250/8B4513/FFFFFF?text=Loading...+Chaos.exe" alt="Games">
-      <div class="section-title">Loading... Chaos.exe</div>
-      <div class="blurb">Playable games, browser chaos, and interactive weirdness.</div>
-      
-    </div>
+      <div class="image-card">
+        <img src="https://via.placeholder.com/200x250/8B4513/FFFFFF?text=Spilled+Ink+%26+Regret" alt="Ink Spills">
+        <div class="section-title">Spilled Ink & Regret</div>
+        <div class="blurb">Personal rants, revelations, and late-night confessions.</div>
+      </div>
 
-    <!-- Section 8: Study -->
-    <div class="image-card">
-      <img src="https://via.placeholder.com/200x250/8B4513/FFFFFF?text=No+Thoughts%2C+Just+Notes" alt="Study">
-      <div class="section-title">No Thoughts, Just Notes</div>
-      <div class="blurb"> I smell something burning? Oh, it's just brain cells on fire.<i>duh.</i></div>
-    </div>
+      <div class="image-card">
+        <img src="https://via.placeholder.com/200x250/8B4513/FFFFFF?text=Just+a+Pinch+of+Panic" alt="Panic">
+        <div class="section-title">Just a Pinch of Panic</div>
+        <div class="blurb">Chaotic cooking adventures with questionable outcomes.</div>
+      </div>
 
-        <!-- Section 9: Songs -->
-    <div class="image-card">
-      <img src="https://via.placeholder.com/200x250/8B4513/FFFFFF?text=No+Thoughts%2C+Just+Notes" alt="Study">
-      <div class="section-title">Static & Sound</div>
-      <div class="blurb"> My version of "good music" - take a look, if you dare not judge</div>
+      <div class="image-card">
+        <img src="https://via.placeholder.com/200x250/8B4513/FFFFFF?text=Spoiler+Alert%3A+I'm+Obsessed" alt="Books">
+        <div class="section-title">Spoiler Alert: I'm Obsessed</div>
+        <div class="blurb">Book reviews with maximum emotions and minimal chill.</div>
+      </div>
+
+      <div class="image-card">
+        <img src="https://via.placeholder.com/200x250/8B4513/FFFFFF?text=Loading...+Chaos.exe" alt="Games">
+        <div class="section-title">Loading... Chaos.exe</div>
+        <div class="blurb">Playable games, browser chaos, and interactive weirdness.</div>
+      </div>
+
+      <div class="image-card">
+        <img src="https://via.placeholder.com/200x250/8B4513/FFFFFF?text=No+Thoughts%2C+Just+Notes" alt="Study">
+        <div class="section-title">No Thoughts, Just Notes</div>
+        <div class="blurb">I smell something burning? Oh, it's just brain cells on fire. <i>duh.</i></div>
+      </div>
+
+      <div class="image-card">
+        <img src="https://via.placeholder.com/200x250/8B4513/FFFFFF?text=Static+%26+Sound" alt="Songs">
+        <div class="section-title">Static & Sound</div>
+        <div class="blurb">My version of "good music" - take a look, if you dare not judge.</div>
+      </div>
+
+      <div class="image-card">
+        <img src="https://via.placeholder.com/200x250/8B4513/FFFFFF?text=Photography+Zone" alt="Photography">
+        <div class="section-title">Frozen Frames</div>
+        <div class="blurb">My captured chaos—moments too real to forget.</div>
+      </div>
     </div>
   </div>
-
 </body>
 </html>

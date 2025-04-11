@@ -4,89 +4,112 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Too Many Tabs Open</title>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Quicksand', sans-serif;
-      background-color: #0f0f0f;
-      color: #ffffff;
+      font-family: 'Press Start 2P', cursive;
+      background-color: #121212;
+      color: #fff;
       padding: 2rem;
     }
 
     h1 {
-      font-family: 'Fredoka One', cursive;
       font-size: 3rem;
-      color: #ff90e8;
+      color: #00FF00;
       text-align: center;
     }
 
-    .section {
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .tab {
+      background-color: #2c2c2c;
+      color: #fff;
+      padding: 10px 20px;
+      margin: 0 5px;
+      cursor: pointer;
+      border-radius: 5px 5px 0 0;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .tab:hover {
+      background-color: #00FF00;
+    }
+
+    .tab-content {
+      display: none;
       background-color: #1a1a1a;
-      border: 2px dashed #3e3e3e;
-      border-radius: 20px;
       padding: 1.5rem;
-      margin: 1.5rem 0;
-      transition: 0.3s ease-in-out;
+      border-radius: 10px;
+      margin-top: 1rem;
     }
 
-    .section:hover {
-      background-color: #2e2e2e;
-    }
-
-    .section h2 {
-      color: #8cf5ff;
-      font-family: 'Fredoka One', cursive;
-      margin-bottom: 0.5rem;
-    }
-
-    .icon {
-      font-size: 1.5rem;
-      margin-right: 0.5rem;
+    .active {
+      display: block;
     }
   </style>
 </head>
 <body>
   <h1>Too Many Tabs Open</h1>
 
-  <div class="section">
-    <h2><span class="icon">💬</span>Insert Sarcasm Here</h2>
+  <div class="tabs">
+    <div class="tab" onclick="openTab('sarcasm')">Insert Sarcasm Here</div>
+    <div class="tab" onclick="openTab('buffering')">Emotionally Buffering</div>
+    <div class="tab" onclick="openTab('mood')">Mood Swings & Misspelled Things</div>
+    <div class="tab" onclick="openTab('ink')">Spilled Ink & Regret</div>
+    <div class="tab" onclick="openTab('panic')">Just a Pinch of Panic</div>
+    <div class="tab" onclick="openTab('books')">Spoiler Alert: I'm Obsessed</div>
+    <div class="tab" onclick="openTab('games')">Loading... Chaos.exe</div>
+    <div class="tab" onclick="openTab('study')">No Thoughts, Just Notes</div>
+  </div>
+
+  <div id="sarcasm" class="tab-content">
     <p>Quotes, clapbacks, and chaotic wisdom.</p>
   </div>
 
-  <div class="section">
-    <h2><span class="icon">🌀</span>Emotionally Buffering</h2>
+  <div id="buffering" class="tab-content">
     <p>Memes, glitches, and the occasional breakdown.</p>
   </div>
 
-  <div class="section">
-    <h2><span class="icon">✏️</span>Mood Swings & Misspelled Things</h2>
+  <div id="mood" class="tab-content">
     <p>Random writing drafts straight from the abyss.</p>
   </div>
 
-  <div class="section">
-    <h2><span class="icon">🖋️</span>Spilled Ink & Regret</h2>
+  <div id="ink" class="tab-content">
     <p>Personal rants, revelations, and late-night confessions.</p>
   </div>
 
-  <div class="section">
-    <h2><span class="icon">🍳</span>Just a Pinch of Panic</h2>
+  <div id="panic" class="tab-content">
     <p>Chaotic cooking adventures with questionable outcomes.</p>
   </div>
 
-  <div class="section">
-    <h2><span class="icon">📚</span>Spoiler Alert: I'm Obsessed</h2>
+  <div id="books" class="tab-content">
     <p>Book reviews with maximum emotions and minimal chill.</p>
   </div>
 
-  <div class="section">
-    <h2><span class="icon">💻</span>Loading... Chaos.exe</h2>
+  <div id="games" class="tab-content">
     <p>Playable games, browser chaos, and interactive weirdness.</p>
   </div>
 
-  <div class="section">
-    <h2><span class="icon">📚</span>Study Section – No thoughts, Just notes</h2>
-    <p>Do I smell something burning? Oh, it's just my brain cells on fire. <i>duh.</i></p>
+  <div id="study" class="tab-content">
+    <p>Academic attempts and brain cells on fire.</p>
   </div>
+
+  <script>
+    function openTab(tabName) {
+      let contents = document.querySelectorAll('.tab-content');
+      contents.forEach(content => content.classList.remove('active'));
+
+      let tabs = document.querySelectorAll('.tab');
+      tabs.forEach(tab => tab.style.backgroundColor = '#2c2c2c');
+
+      document.getElementById(tabName).classList.add('active');
+      event.target.style.backgroundColor = '#00FF00';
+    }
+  </script>
 </body>
 </html>

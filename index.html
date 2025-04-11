@@ -9,107 +9,166 @@
     body {
       margin: 0;
       font-family: 'Press Start 2P', cursive;
-      background-color: #121212;
-      color: #fff;
+      background-color: #3e2a47; /* Dark brown */
+      color: #f0e68c; /* Mustard yellow */
       padding: 2rem;
+      overflow: hidden;
     }
 
     h1 {
       font-size: 3rem;
-      color: #00FF00;
+      color: #f0e68c;
+      text-align: center;
+      margin-bottom: 2rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    .collage {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      padding: 2rem;
+      overflow-y: scroll;
+      height: 75vh;
+    }
+
+    .image-card {
+      position: relative;
+      width: 200px;
+      height: 250px;
+      overflow: hidden;
+      border-radius: 15px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .image-card:hover {
+      transform: scale(1.1);
+    }
+
+    .image-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .section-title {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      color: #f0e68c;
+      font-size: 1.2rem;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .image-card:hover .section-title {
+      opacity: 1;
+    }
+
+    .blurb {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1rem;
+      color: #fff;
+      display: none;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 0.5rem;
+      border-radius: 10px;
       text-align: center;
     }
 
-    .tabs {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 2rem;
-    }
-
-    .tab {
-      background-color: #2c2c2c;
-      color: #fff;
-      padding: 10px 20px;
-      margin: 0 5px;
-      cursor: pointer;
-      border-radius: 5px 5px 0 0;
-      transition: background-color 0.3s ease-in-out;
-    }
-
-    .tab:hover {
-      background-color: #00FF00;
-    }
-
-    .tab-content {
-      display: none;
-      background-color: #1a1a1a;
-      padding: 1.5rem;
-      border-radius: 10px;
-      margin-top: 1rem;
-    }
-
-    .active {
+    .image-card:hover .blurb {
       display: block;
+    }
+
+    .secret {
+      position: absolute;
+      font-size: 0.8rem;
+      color: #ff6347; /* Secret message in red */
+      top: 30%;
+      right: 10%;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .image-card:hover .secret {
+      opacity: 1;
     }
   </style>
 </head>
 <body>
+
   <h1>Too Many Tabs Open</h1>
 
-  <div class="tabs">
-    <div class="tab" onclick="openTab('sarcasm')">Insert Sarcasm Here</div>
-    <div class="tab" onclick="openTab('buffering')">Emotionally Buffering</div>
-    <div class="tab" onclick="openTab('mood')">Mood Swings & Misspelled Things</div>
-    <div class="tab" onclick="openTab('ink')">Spilled Ink & Regret</div>
-    <div class="tab" onclick="openTab('panic')">Just a Pinch of Panic</div>
-    <div class="tab" onclick="openTab('books')">Spoiler Alert: I'm Obsessed</div>
-    <div class="tab" onclick="openTab('games')">Loading... Chaos.exe</div>
-    <div class="tab" onclick="openTab('study')">No Thoughts, Just Notes</div>
+  <div class="collage">
+    <!-- Section 1: Sarcasm -->
+    <div class="image-card">
+      <img src="https://via.placeholder.com/200x250/8B4513/FFFFFF?text=Insert+Sarcasm+Here" alt="Sarcasm">
+      <div class="section-title">Insert Sarcasm Here</div>
+      <div class="blurb">Quotes, clapbacks, and chaotic wisdom.</div>
+      <div class="secret">🕵️‍♂️ Hidden sarcasm mode activated! 🤐</div>
+    </div>
+    
+    <!-- Section 2: Buffering -->
+    <div class="image-card">
+      <img src="https://via.placeholder.com/200x250/8B4513/FFFFFF?text=Emotionally+Buffering" alt="Buffering">
+      <div class="section-title">Emotionally Buffering</div>
+      <div class="blurb">Memes, glitches, and the occasional breakdown.</div>
+      <div class="secret">💔 You're buffering... aren't we all?</div>
+    </div>
+    
+    <!-- Section 3: Mood Swings -->
+    <div class="image-card">
+      <img src="https://via.placeholder.com/200x250/8B4513/FFFFFF?text=Mood+Swings+%26+Misspelled+Things" alt="Mood Swings">
+      <div class="section-title">Mood Swings & Misspelled Things</div>
+      <div class="blurb">Random writing drafts straight from the abyss.</div>
+      <div class="secret">📜 Missing pages... or is it just me?</div>
+    </div>
+    
+    <!-- Section 4: Ink Spills -->
+    <div class="image-card">
+      <img src="https://via.placeholder.com/200x250/8B4513/FFFFFF?text=Spilled+Ink+%26+Regret" alt="Ink Spills">
+      <div class="section-title">Spilled Ink & Regret</div>
+      <div class="blurb">Personal rants, revelations, and late-night confessions.</div>
+      <div class="secret">🖋️ Could've been worse. Or not...</div>
+    </div>
+    
+    <!-- Section 5: Panic -->
+    <div class="image-card">
+      <img src="https://via.placeholder.com/200x250/8B4513/FFFFFF?text=Just+a+Pinch+of+Panic" alt="Panic">
+      <div class="section-title">Just a Pinch of Panic</div>
+      <div class="blurb">Chaotic cooking adventures with questionable outcomes.</div>
+      <div class="secret">🍳 Will I survive this recipe? Stay tuned.</div>
+    </div>
+    
+    <!-- Section 6: Books -->
+    <div class="image-card">
+      <img src="https://via.placeholder.com/200x250/8B4513/FFFFFF?text=Spoiler+Alert%3A+I'm+Obsessed" alt="Books">
+      <div class="section-title">Spoiler Alert: I'm Obsessed</div>
+      <div class="blurb">Book reviews with maximum emotions and minimal chill.</div>
+      <div class="secret">📚 Who doesn't love spoilers?</div>
+    </div>
+
+    <!-- Section 7: Games -->
+    <div class="image-card">
+      <img src="https://via.placeholder.com/200x250/8B4513/FFFFFF?text=Loading...+Chaos.exe" alt="Games">
+      <div class="section-title">Loading... Chaos.exe</div>
+      <div class="blurb">Playable games, browser chaos, and interactive weirdness.</div>
+      <div class="secret">🎮 New game unlocked! Get ready.</div>
+    </div>
+
+    <!-- Section 8: Study -->
+    <div class="image-card">
+      <img src="https://via.placeholder.com/200x250/8B4513/FFFFFF?text=No+Thoughts%2C+Just+Notes" alt="Study">
+      <div class="section-title">No Thoughts, Just Notes</div>
+      <div class="blurb">Academic attempts and brain cells on fire.</div>
+      <div class="secret">💡 Knowledge in progress... maybe.</div>
+    </div>
   </div>
 
-  <div id="sarcasm" class="tab-content">
-    <p>Quotes, clapbacks, and chaotic wisdom.</p>
-  </div>
-
-  <div id="buffering" class="tab-content">
-    <p>Memes, glitches, and the occasional breakdown.</p>
-  </div>
-
-  <div id="mood" class="tab-content">
-    <p>Random writing drafts straight from the abyss.</p>
-  </div>
-
-  <div id="ink" class="tab-content">
-    <p>Personal rants, revelations, and late-night confessions.</p>
-  </div>
-
-  <div id="panic" class="tab-content">
-    <p>Chaotic cooking adventures with questionable outcomes.</p>
-  </div>
-
-  <div id="books" class="tab-content">
-    <p>Book reviews with maximum emotions and minimal chill.</p>
-  </div>
-
-  <div id="games" class="tab-content">
-    <p>Playable games, browser chaos, and interactive weirdness.</p>
-  </div>
-
-  <div id="study" class="tab-content">
-    <p>Academic attempts and brain cells on fire.</p>
-  </div>
-
-  <script>
-    function openTab(tabName) {
-      let contents = document.querySelectorAll('.tab-content');
-      contents.forEach(content => content.classList.remove('active'));
-
-      let tabs = document.querySelectorAll('.tab');
-      tabs.forEach(tab => tab.style.backgroundColor = '#2c2c2c');
-
-      document.getElementById(tabName).classList.add('active');
-      event.target.style.backgroundColor = '#00FF00';
-    }
-  </script>
 </body>
 </html>

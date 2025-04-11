@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AniMagi Styled UI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f3f0db;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen px-6 py-4">
+    <!-- Navbar -->
+    <header class="flex justify-between items-center">
+      <h1 class="text-xl font-bold">AniMagi</h1>
+      <nav class="space-x-6 font-semibold">
+        <a href="#" class="text-black border-b-4 border-yellow-400 pb-1">HOME</a>
+        <a href="#" class="hover:text-yellow-600">BLOG</a>
+        <a href="#" class="hover:text-yellow-600">CONTACT US</a>
+        <a href="#" class="hover:text-yellow-600">DOWNLOAD</a>
+      </nav>
+      <button class="border-2 px-4 py-1 rounded-full font-semibold">LOGIN</button>
+    </header>
+
+    <!-- Hero -->
+    <section class="mt-10">
+      <h2 class="text-5xl font-bold leading-tight max-w-xl">Dive Into The World Of Anime!</h2>
+      <div class="mt-6 flex gap-6 items-center">
+        <div class="border-2 border-black w-24 h-24 rounded-full flex items-center justify-center text-center text-xs font-bold">
+          <div class="transform -rotate-12">
+            START <br /> GENERATE
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cards -->
+    <section class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Card 1 -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-md border-2 border-black">
+        <img src="https://i.pinimg.com/564x/55/68/60/556860764d540678b5e8cc705f1b6bd0.jpg" alt="Anime" class="w-full object-cover" />
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-md border-2 border-black p-4 flex flex-col justify-between">
+        <h3 class="text-md font-bold uppercase mb-2">SMARTPHONE APP MEMES</h3>
+        <p class="text-sm text-gray-800 mb-4">
+          The smartphone application MEMES, where ANIMAGI serves as the core technology behind it, is now available in apple app store google play.
+        </p>
+        <button class="border-2 border-black px-4 py-1 rounded-full font-semibold w-fit hover:bg-black hover:text-white transition">
+          DOWNLOAD
+        </button>
+      </div>
+    </section>
+  </body>
+</html>
 

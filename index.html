@@ -3,144 +3,90 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WriteByte</title>
-  <!-- Importing pixel-style font -->
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <title>Too Many Tabs Open</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Press Start 2P', cursive;
-      background: #111;
-      color: #fff;
-      text-align: center;
-    }
-
-    header {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: #222;
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #0f0f0f;
+      color: #ffffff;
+      padding: 2rem;
     }
 
     h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      text-shadow: 2px 2px #ffcc00;
-    }
-
-    .scroll-down {
-      font-size: 1rem;
-      animation: bounce 1.2s infinite;
-      margin-top: 2rem;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+      font-family: 'Fredoka One', cursive;
+      font-size: 3rem;
+      color: #ff90e8;
+      text-align: center;
     }
 
     .section {
-      padding: 4rem 2rem;
-      background: rgba(0, 0, 0, 0.8);
-      border-bottom: 2px dashed #ffcc00;
-    }
-
-    a {
-      color: #ffcc00;
-      text-decoration: none;
-    }
-
-    footer {
-      padding: 2rem;
-      font-size: 0.8rem;
-      background: #222;
-    }
-
-    .nav-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-    .nav-item {
-      background: #333;
+      background-color: #1a1a1a;
+      border: 2px dashed #3e3e3e;
+      border-radius: 20px;
       padding: 1.5rem;
-      border: 2px solid #ffcc00;
-      transition: 0.3s ease;
+      margin: 1.5rem 0;
+      transition: 0.3s ease-in-out;
     }
 
-    .nav-item:hover {
-      background: #444;
-      transform: scale(1.05);
+    .section:hover {
+      background-color: #2e2e2e;
     }
 
-    .easter-egg {
-      font-size: 0.6rem;
-      margin-top: 2rem;
-      color: #888;
-      cursor: pointer;
+    .section h2 {
+      color: #8cf5ff;
+      font-family: 'Fredoka One', cursive;
+      margin-bottom: 0.5rem;
+    }
+
+    .icon {
+      font-size: 1.5rem;
+      margin-right: 0.5rem;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>WELCOME TO WRITEBYTE</h1>
-    <p class="scroll-down">↓ Scroll Down ↓</p>
-  </header>
+  <h1>Too Many Tabs Open</h1>
 
-  <section class="section" id="intro">
-    <h2>About the Creator</h2>
-    <p>Just your average pixel-powered chaos chef, here to cook up code and crunchy content.</p>
-  </section>
+  <div class="section">
+    <h2><span class="icon">💬</span>Insert Sarcasm Here</h2>
+    <p>Quotes, clapbacks, and chaotic wisdom.</p>
+  </div>
 
-  <section class="section" id="navigation">
-    <h2>Explore the Madness</h2>
-    <div class="nav-grid">
-      <a class="nav-item" href="#books">📚 Books & Manhuas</a>
-      <a class="nav-item" href="#recipes">🍜 Cooking Recipes</a>
-      <a class="nav-item" href="#memes">🤣 Memes</a>
-      <a class="nav-item" href="#games">🎮 Games</a>
-      <a class="nav-item" href="#study">📖 Study Space</a>
-    </div>
-  </section>
+  <div class="section">
+    <h2><span class="icon">🌀</span>Emotionally Buffering</h2>
+    <p>Memes, glitches, and the occasional breakdown.</p>
+  </div>
 
-  <section class="section" id="books">
-    <h2>Books + Manhuas</h2>
-    <p>Where pixels and plot twists meet.</p>
-  </section>
+  <div class="section">
+    <h2><span class="icon">✏️</span>Mood Swings & Misspelled Things</h2>
+    <p>Random writing drafts straight from the abyss.</p>
+  </div>
 
-  <section class="section" id="recipes">
-    <h2>Cooking Recipes</h2>
-    <p>Secret family dishes (and snacks to survive coding nights).</p>
-  </section>
+  <div class="section">
+    <h2><span class="icon">🖋️</span>Spilled Ink & Regret</h2>
+    <p>Personal rants, revelations, and late-night confessions.</p>
+  </div>
 
-  <section class="section" id="memes">
-    <h2>Memes</h2>
-    <p>Pixel-perfect humor, handpicked by yours truly.</p>
-  </section>
+  <div class="section">
+    <h2><span class="icon">🍳</span>Just a Pinch of Panic</h2>
+    <p>Chaotic cooking adventures with questionable outcomes.</p>
+  </div>
 
-  <section class="section" id="games">
-    <h2>Games</h2>
-    <p>Pixel brawls and browser battles await you here!</p>
-  </section>
+  <div class="section">
+    <h2><span class="icon">📚</span>Spoiler Alert: I'm Obsessed</h2>
+    <p>Book reviews with maximum emotions and minimal chill.</p>
+  </div>
 
-  <section class="section" id="study">
-    <h2>Study Zone</h2>
-    <p>Who says byte-writers can't be smart?</p>
-  </section>
+  <div class="section">
+    <h2><span class="icon">💻</span>Loading... Chaos.exe</h2>
+    <p>Playable games, browser chaos, and interactive weirdness.</p>
+  </div>
 
-  <footer>
-    <p>Made with chaos and code by <strong>WriteByte</strong> | <a href="#">Back to top</a></p>
-    <p class="easter-egg" onclick="alert('You found an easter egg! Go snack on some brain food.')">Pssst... this isn’t the only secret lurking here 👀</p>
-  </footer>
+  <div class="section">
+    <h2><span class="icon">📚</span>Study Section – Name Pending</h2>
+    <p>Academic attempts and brain cells on fire. (We'll name it soon!)</p>
+  </div>
 </body>
 </html>

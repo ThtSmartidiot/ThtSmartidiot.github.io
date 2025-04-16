@@ -17,15 +17,16 @@
 
     .gallery {
       display: flex;
-      overflow-x: auto;
+      flex-direction: column;  /* Stack items vertically */
+      overflow-y: auto;        /* Enable vertical scrolling */
       padding: 40px;
       gap: 30px;
-      scroll-snap-type: x mandatory;
+      scroll-snap-type: y mandatory; /* Vertical snap */
     }
-
+    
     .poster {
-      flex: 0 0 auto;
-      width: 600px;
+     width: 100%;  /* Use full width for each poster */
+      max-width: 600px; /* Optional: Limit the width to 600px */
       background: #fff;
       padding: 40px;
       box-shadow: 0 0 20px rgba(0,0,0,0.1);
